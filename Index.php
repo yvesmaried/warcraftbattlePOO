@@ -14,10 +14,11 @@ require_once('Character.php')
 </head>
 <body>
     <?php
-    $personage = new Character(500,300);
-    var_dump($personnage->getRage());
-    $personage->setRage(12000);
-    var_dump($personnage->getRage());
+    $personage = new Hero(500,300,'Marteau-Boing', 500, 'zeboubou',200);
+    
+    $personage->attacked(300);
+    echo 'tu as' . $personage->getHealth() . 'HP';
+    
     
     ?>
 </body>
