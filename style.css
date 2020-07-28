@@ -1,0 +1,25 @@
+body {
+background-image: url(img/field.jpg);
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: auto;
+}
+.cadre{
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 1rem;
+border: solid 3px rgba(71, 71, 71, 0.5);
+}
+.imghero {
+    background-image: url(img/imghero.gif);
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+.imgorc {
+    background-image: url(img/imgorc.gif);
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
