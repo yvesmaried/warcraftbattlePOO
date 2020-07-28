@@ -2,51 +2,51 @@
 
 class Hero extends Character
 {
-    private $weapon;
-    private $weaponDamage;
-    private $shield;
-    private $shieldValue;
+    private $_weapon;
+    private $_weaponDamage;
+    private $_shield;
+    private $_shieldValue;
 
     public function getWeapon()
     {
-        return $this->weapon;
+        return $this->_weapon;
     }
     public function getWeaponDamage()
     {
-        return $this->weaponDamage;
+        return $this->_weaponDamage;
     }
     public function getShield()
     {
-        return $this->shield;
+        return $this->_shield;
     }
     public function getShieldValue()
     {
-        return $this->shieldValue;
+        return $this->_shieldValue;
     }
-    public function setWeapon($weaponName)
+    public function setWeapon($_weaponName)
     {
-        $this->weapon = $weaponName;
+        $this->_weapon = $_weaponName;
     }
-    public function setWeaponDamage($weaponDamageValue)
+    public function setWeaponDamage($_weaponDamageValue)
     {
-        $this->weapon = $weaponDamageValue;
+        $this->_weaponDamage = $_weaponDamageValue;
     }
-    public function setShield($shieldName)
+    public function setShield($_shieldName)
     {
-        $this->weapon = $shieldName;
+        $this->_shield = $_shieldName;
     }
-    public function setShieldValue($shieldDefenseValue)
+    public function setShieldValue($_shieldDefenseValue)
     {
-        $this->weapon = $shieldDefenseValue;
+        $this->_shieldValue = $_shieldDefenseValue;
     }
 
     public function __construct($healthValue, $rageValue, $weaponName, $weaponDamageValue, $shieldName, $shieldDefenseValue)
     {
         parent::__construct($healthValue, $rageValue);
-        $this->weapon = $weaponName;
-        $this->weaponDamage = $weaponDamageValue;
-        $this->shield = $shieldName;
-        $this->shieldValue = $shieldDefenseValue;
+        $this->_weapon = $weaponName;
+        $this->_weaponDamage = $weaponDamageValue;
+        $this->_shield = $shieldName;
+        $this->_shieldValue = $shieldDefenseValue;
         echo 'bravo le hero est créer <br>';
         echo 'vie: ' . parent::getHealth() . '<br>';
         echo 'rage: ' . $this->getRage() . '<br>';
@@ -55,6 +55,9 @@ class Hero extends Character
     public function attacked($attackValue){
         $newHealth = $this->getHealth() - ($attackValue - $this->getShieldValue());
         $this->setHealth($newHealth);
-
+    }
+    public function rageUp(){
+        $newRage = $this->getRage() + 30;
+        $this->setRage($newRage);
     }
 }

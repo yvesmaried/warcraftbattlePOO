@@ -1,30 +1,30 @@
 <?php
 class Character
 {
-    private $health = 500;
-    private $rage = 200;
+    private $_health = 500;
+    private $_rage = 200;
 
     public function getHealth()
     {
-        return $this->health;
+        return $this->_health;
     }
     public function getRage()
     {
-        return $this->rage;
+        return $this->_rage;
     }
     public function setHealth($healthValue)
     {
-        $this->health = $healthValue;
+        $this->_health = $healthValue;
     }
 
     public function setRage($rageValue)
     {
-        $this->health = $rageValue;
+        $this->_rage = $rageValue;
     }
 
     public function __construct($healthValue, $rageValue)
     {
-        $this->health = $healthValue;
-        $this->rage = $rageValue;
+        $this->_health = $healthValue;
+        $this->_rage = $rageValue;
     }
 }
