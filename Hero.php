@@ -58,12 +58,12 @@ class Hero extends Character
         $this->_weaponDamage = $weaponDamageValue;
         $this->_shield = $shieldName;
         $this->_shieldValue = $shieldDefenseValue;
-        echo 'Bravo le hero ' . $this->getHeroName() . ' est créer <br>';
+        echo 'Le hero ' . $this->getHeroName() . ' est créer <br>';
         echo 'Vie du hero : <span class=\'health\'>' . parent::getHealth() . '</span><br>';
         echo 'Rage du hero : <span class=\'rage\'>' . $this->getRage() . '</span><br>';
-        echo 'L\'arme du hero : ' . $this->getWeapon() . '<br>';
+        echo 'L\'arme du hero : <b>' . $this->getWeapon() . '</b>🗡️<br>';
         echo 'DMG de l\'arme : <span class=\'damage\'>' . $this->getWeaponDamage() . '</span><br>';
-        echo 'Bouclier du hero : ' . $this->getShield() . '<br>';
+        echo 'Bouclier du hero : <b>' . $this->getShield() . '</b>🛡️<br>';
         echo 'DEF du bouclier : <span class=\'defense\'>' . $this->getShieldValue() . '</span><br>';
     }
     public function attacked($attackValue)
