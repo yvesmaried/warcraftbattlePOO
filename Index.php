@@ -15,18 +15,19 @@ require_once('Orc.php');
 <body>
     <p>hero</p>
     <?php
-    $personage = new Hero(2000,300,'Marteau-Boing', 500, 'zeboubou',200);
+    $personage = new Hero(2000,0,'Marteau-Boing', 250, 'zeboubou',600);
     
     $personage->attacked(300);
-    echo 'tu as ' . $personage->getHealth() . ' HP <br>';
+    echo 'tu as: ' . $personage->getHealth() . ' HP <br>';
     
     $personage->rageUp();
-    echo 'level de rage ' . $personage->getRage();
+    echo 'level de rage: ' . $personage->getRage();
     ?>
     <p>orc:</p>
     <?php
-    $ennemy = new Orc(500,300,300);
-
+    $ennemy = new Orc(500, 0);
+    $ennemy->attack();
+    echo 'l\'orc frappe a: ' . $ennemy->getDamage();
     ?>
 </body>
 </html>

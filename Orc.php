@@ -10,16 +10,17 @@ class Orc extends Character{
     
         $this->_ennemyDamage = $damageHit;
     }
-    public function __construct($healthValue, $rageValue, $damageValue)
+    public function __construct($healthValue, $rageValue)
     {
         parent::__construct($healthValue, $rageValue);
-        $this->_ennemyDamage = $damageValue;
 
         echo 'l\'orc est créer <br>';
-        echo 'vie: ' . parent::getHealth() . '<br>';
-        echo 'rage: ' . $this->getRage() . '<br>';
-        echo 'Dégats: ' . $this->getDamage() . '<br>';
-
+        echo 'vie de l\'orc: ' . parent::getHealth() . '<br>';
+        echo 'rage de l\'orc: ' . $this->getRage() . '<br>';
+    }
+    public function attack(){
+        $newDamage = rand(600, 800);
+        $this->setDamage($newDamage);
     }
 }
 

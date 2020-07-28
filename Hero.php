@@ -48,8 +48,8 @@ class Hero extends Character
         $this->_shield = $shieldName;
         $this->_shieldValue = $shieldDefenseValue;
         echo 'bravo le hero est créer <br>';
-        echo 'vie: ' . parent::getHealth() . '<br>';
-        echo 'rage: ' . $this->getRage() . '<br>';
+        echo 'vie du hero: ' . parent::getHealth() . '<br>';
+        echo 'rage du hero: ' . $this->getRage() . '<br>';
 
     }
     public function attacked($attackValue){
