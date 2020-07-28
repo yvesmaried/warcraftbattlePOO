@@ -1,25 +1,62 @@
 body {
-background-image: url(img/field.jpg);
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: auto;
+    background-image: url(img/field.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-.cadre{
-padding: 10px;
-background-color: rgba(255, 255, 255, 0.5);
-border-radius: 1rem;
-border: solid 3px rgba(71, 71, 71, 0.5);
+
+.cadreext {
+    padding: 5px;
+    background: linear-gradient(45deg, rgba(80, 50, 27, 1) 0%, rgba(181, 136, 50, 1) 29%, rgba(129, 74, 21, 1) 37%, rgba(181, 116, 36, 1) 50%, rgba(136, 95, 32, 1) 64%, rgba(180, 140, 53, 1) 86%, rgba(120, 92, 35, 1) 100%);
 }
+
+.cadreint {
+    padding: 10px;
+    background-color: honeydew;
+}
+
+.cadre {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .imghero {
     background-image: url(img/imghero.gif);
     background-attachment: fixed;
     background-position: bottom left;
     background-repeat: no-repeat;
+    background-size: 250px;
 }
+
 .imgorc {
     background-image: url(img/imgorc.gif);
     background-attachment: fixed;
     background-position: bottom right;
     background-repeat: no-repeat;
+    background-size: 250px;
+}
+
+.health {
+    background-color: rgb(126, 255, 126);
+    border-radius: 3px;
+    padding: 0 1rem;
+}
+
+.rage {
+    background-color: rgb(255, 197, 91);
+    border-radius: 3px;
+    padding: 0 1rem;
+}
+
+.damage {
+    background-color: rgb(255, 100, 100);
+    border-radius: 3px;
+    padding: 0 1rem;
+}
+
+.defense {
+    background-color: rgb(113, 116, 255);
+    border-radius: 3px;
+    padding: 0 1rem;
 }

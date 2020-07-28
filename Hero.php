@@ -50,7 +50,7 @@ class Hero extends Character
         $this->_shieldValue = $_shieldDefenseValue;
     }
 
-    public function __construct($healthValue, $rageValue,$heroNameValue, $weaponName, $weaponDamageValue, $shieldName, $shieldDefenseValue)
+    public function __construct($healthValue, $rageValue, $heroNameValue, $weaponName, $weaponDamageValue, $shieldName, $shieldDefenseValue)
     {
         parent::__construct($healthValue, $rageValue);
         $this->_heroName = $heroNameValue;
@@ -58,21 +58,27 @@ class Hero extends Character
         $this->_weaponDamage = $weaponDamageValue;
         $this->_shield = $shieldName;
         $this->_shieldValue = $shieldDefenseValue;
-        echo 'bravo le hero est créer <br>';
-        echo 'vie du hero: ' . parent::getHealth() . '<br>';
-        echo 'rage du hero: ' . $this->getRage() . '<br>';
-
+        echo 'Bravo le hero ' . $this->getHeroName() . ' est créer <br>';
+        echo 'Vie du hero : <span class=\'health\'>' . parent::getHealth() . '</span><br>';
+        echo 'Rage du hero : <span class=\'rage\'>' . $this->getRage() . '</span><br>';
+        echo 'L\'arme du hero : ' . $this->getWeapon() . '<br>';
+        echo 'DMG de l\'arme : <span class=\'damage\'>' . $this->getWeaponDamage() . '</span><br>';
+        echo 'Bouclier du hero : ' . $this->getShield() . '<br>';
+        echo 'DEF du bouclier : <span class=\'defense\'>' . $this->getShieldValue() . '</span><br>';
     }
-    public function attacked($attackValue){
+    public function attacked($attackValue)
+    {
         $newHealth = $this->getHealth() - ($attackValue - $this->getShieldValue());
         $this->setHealth($newHealth);
     }
 
-    public function rageUp(){
+    public function rageUp()
+    {
         $newRage = $this->getRage() + 30;
         $this->setRage($newRage);
     }
-    public function rageDown(){
+    public function rageDown()
+    {
         $newRage2 = $this->getRage() - 100;
         $this->setRage($newRage2);
     }
